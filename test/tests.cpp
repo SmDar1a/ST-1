@@ -6,7 +6,7 @@
 TEST(checkPrime, testLargeConstantValue) {
     EXPECT_TRUE(checkPrime(1e9 + 13));
     EXPECT_TRUE(checkPrime(1e9 + 19));
-    EXPECT_TRUE(checkPrime(987'654'321));
+    EXPECT_FALSE(checkPrime(987'654'321));
 }
 
 TEST(checkPrime, testConstantValue) {
@@ -23,8 +23,8 @@ TEST(nPrime, testConstantValueN) {
 }
 
 TEST(nextPrime, testLargeConstantValueNext) {
-    EXPECT_EQ(1e9 + 13, nextPrime(1e9 + 7));
-    EXPECT_EQ(1e9 + 19, nextPrime(1e9 + 13));
+    EXPECT_EQ(1e9 + 9, nextPrime(1e9 + 7));
+    EXPECT_EQ(1e9 + 21, nextPrime(1e9 + 13));
 }
 
 TEST(PrimaryNumbers, CheckPrimeWithZero) {
