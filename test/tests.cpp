@@ -3,7 +3,6 @@
 #include <cstdint>
 #include "alg.h"
 
-
 TEST(checkPrime, testLargeConstantValue) {
     EXPECT_TRUE(checkPrime(1e9 + 13));
     EXPECT_TRUE(checkPrime(1e9 + 19));
